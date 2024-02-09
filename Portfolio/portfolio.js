@@ -109,3 +109,17 @@ function myMenuFunction(){
   }
   
   window.addEventListener('scroll', scrollActive)
+  document.getElementById('download-btn').addEventListener('click', function() {
+    // Create an anchor element
+    var a = document.createElement('a');
+    // Set the href attribute to the URL of the document to be downloaded
+    a.href = 'C:\Users\mutha\OneDrive\Documents\GitHub\MuthamiKN\Portfolio\Resume.docx'; // Replace 'path/to/your/document.pdf' with the actual path to your document
+    // Set the download attribute to specify the filename users will see when they download the document
+    a.download = 'resume.docx'; // Replace 'document.pdf' with the desired filename
+    // Append the anchor element to the body
+    document.body.appendChild(a);
+    // Trigger a click event on the anchor element
+    a.click();
+    // Remove the anchor element from the body
+    document.body.removeChild(a);
+});
