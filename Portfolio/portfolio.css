@@ -207,12 +207,13 @@ nav{
 .featured-text-btn>.blue-btn:hover{
     background: var(--first-color-hover);
 }
-.social_icons{
+.social_icons {
     display: flex;
     margin-top: 5em;
     gap: 30px;
 }
-.icon{
+
+.icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,10 +222,15 @@ nav{
     border-radius: 50%;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    background-color: black;
+    color: white;
 }
-.icon:hover{
-    color: var(--first-color);
+
+.icon:hover {
+    color: #555; /* Adjust hover color here */
 }
+
+
 
 /* ----- FEATURED IMAGE BOX ----- */
 .featured-image{
