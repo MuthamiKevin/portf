@@ -363,8 +363,8 @@ h3{
 }
 
 /* ----- PROJECTS BOX ----- */
-.projects{
-    height: 100%;
+.section{
+    min-height: 100vh;
     background-color: #f0f0f0; /* Change the background color as needed */
 }
 .project-container{
