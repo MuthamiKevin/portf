@@ -313,17 +313,24 @@ h3{
 }
 
 /* ----- ABOUT INFO ----- */
+
 .about-info {
+    /* Positioning */
     position: relative;
+    /* Flexbox layout */
     display: flex;
-    align-items: center;
-    justify-content: center; /* Center horizontally */
-    flex-direction: column;
-    padding: 30px 20px; /* Adjust padding */
-    width: 100%;
-    height: 100vh; /* Set height to fill the window */
-    background: var(--color-white);
+    align-items: center; /* Vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    /* Padding */
+    padding-block: 30px 70px; /* Padding at the top and bottom */
+    padding-inline: 20px; /* Padding on the left and right */
+    /* Width */
+    width: 100%; /* Take up the full width of the container */
+    /* Background */
+    background: var(--color-white); /* White background */
+    /* Box shadow for a raised effect */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    /* Rounded corners */
     border-radius: 20px;
 }
 
