@@ -48,6 +48,7 @@ html{
 }
 
 
+
 /* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
@@ -77,85 +78,106 @@ i{
 body{
     background: var(--body-color);
 }
-
-/* Reset default margin and padding */
-body, h1, h2, h3, p, ul {
-    margin: 0;
-    padding: 0;
-}
-
-/* Header Container */
-.container {
+.container{
     width: 100%;
-    max-width: 100%;
-    padding: 20px;
-    box-sizing: border-box; /* Include padding in width calculation */
-    background: #ffffff; /* Set background color */
+    position: relative;
+    overflow-x: hidden; /* not mandatory */
 }
 
-/* Navigation Header */
-#header {
+/* ----- NAVIGATION BAR ----- */
+nav{
+    position: fixed;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: fixed; /* Make the header fixed */
-    top: 0; /* Position it at the top */
-    left: 0; /* Position it at the left */
-    width: 100%; /* Take the full width of the viewport */
-    background: #ffffff; /* Set background color */
-    z-index: 1000; /* Ensure it stays above other content */
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background: var(--body-color);
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
 }
-
-/* Navigation Logo */
-.nav-logo {
-    font-size: 24px;
-    font-weight: bold;
+.nav-logo{
+   position: relative;
 }
-
-/* Navigation Menu */
-.nav-menu {
-    display: flex;
-    align-items: center;
+.nav-name{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
 }
-
-/* Navigation Menu List */
-.nav_menu_list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.nav-logo span{
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: var(--text-color-second);
+}
+.nav-menu, .nav_menu_list{
     display: flex;
 }
-
-/* Navigation List Item */
-.nav_list {
-    margin-right: 20px;
+.nav-menu .nav_list{
+    list-style: none;
+    position: relative;
 }
-
 /* Navigation Link */
 .nav-link {
     text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
+    color: var(--text-color-second);
+    font-weight: 500;
+    padding-inline: 15px;
+    margin-inline: 20px;
+    position: relative; /* Make sure the parent is positioned for the absolute positioning of pseudo-element */
 }
 
-.nav-link:hover {
-    color: #555;
+/* Underline animation */
+.nav-link::after {
+    content: ''; /* Add a pseudo-element */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--first-color); /* Color of the underline */
+    transition: width 0.3s ease; /* Transition for the width property */
 }
 
-#icon {
-    width: 30px;
-    height: auto;
+/* Hover effect */
+.nav-link:hover::after {
+    width: 100%; /* Expand the underline to full width on hover */
+}
+
+.nav-menu-btn{
+    display: none;
+}
+.nav-menu-btn i{
+    font-size: 28px;
     cursor: pointer;
 }
-
-/* Media Query for Responsive Design */
-@media (max-width: 768px) {
-    .nav_menu_list {
-        display: none; /* Hide the menu on smaller screens */
-    }
+.active-link{
+    position: relative;
+    color: var(--first-color);
+    transition: .3;
 }
-
-
+.active-link::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+#icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+}
 
 /* ----- WRAPPER DESIGN ----- */
 .wrapper{
