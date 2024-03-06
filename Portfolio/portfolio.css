@@ -78,16 +78,19 @@ body{
     background: var(--body-color);
 }
 
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
 
-/*/* Header Container */
+/* Header Container */
 .container {
-    width: 1200%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
     padding: 20px;
-    position: relative;
-    overflow-x: hidden; /* not mandatory */
-    background: var(--body-color); /* Blend with body */
+    box-sizing: border-box; /* Include padding in width calculation */
+    background: #ffffff; /* Set background color */
 }
 
 /* Navigation Header */
@@ -101,7 +104,6 @@ body{
 .nav-logo {
     font-size: 24px;
     font-weight: bold;
-    position: relative; /* Added from the second set of CSS */
 }
 
 /* Navigation Menu */
@@ -121,95 +123,24 @@ body{
 /* Navigation List Item */
 .nav_list {
     margin-right: 20px;
-    position: relative;
 }
 
 /* Navigation Link */
 .nav-link {
     text-decoration: none;
     color: #333;
-    padding: 10px;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
     color: #555;
 }
-
-/* Circle Indicator */
-.circle {
-    width: 10px;
-    height: 10px;
-    background-color: #333;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    right: -5px;
-    transform: translateY(-50%);
-    display: none; /* Initially hide */
-}
-
-/* Additional styles from the second set of CSS */
-nav {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100px;
-    line-height: 90px;
-    padding-inline: 9vw;
-    transition: .3s;
-    z-index: 100;
-}
-
-.nav-name {
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--text-color-third);
-}
-
-.nav-logo span {
-    position: absolute;
-    top: -15px;
-    right: -20px;
-    font-size: 5em;
-    color: var(--text-color-second);
-}
-
-.nav-menu-btn {
-    display: none;
-}
-
-.nav-menu-btn i {
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.active-link {
-    position: relative;
-    color: var(--first-color);
-    transition: .3;
-}
-
-.active-link::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -15px;
-    transform: translate(-50%, -50%);
-    width: 5px;
-    height: 5px;
-    background: var(--first-color);
-    border-radius: 50%;
-}
-
-
-/* Moon Icon */
 #icon {
     width: 30px;
     height: auto;
     cursor: pointer;
 }
+
 
 /* Media Query for Responsive Design */
 @media (max-width: 768px) {
