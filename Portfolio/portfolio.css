@@ -79,13 +79,15 @@ body{
 }
 
 
-/* ----- NAVIGATION BAR ----- */
-/* Header Container */
+/*/* Header Container */
 .container {
-    width: 100%;
+    width: 1200%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
+    overflow-x: hidden; /* not mandatory */
+    background: var(--body-color); /* Blend with body */
 }
 
 /* Navigation Header */
@@ -99,6 +101,7 @@ body{
 .nav-logo {
     font-size: 24px;
     font-weight: bold;
+    position: relative; /* Added from the second set of CSS */
 }
 
 /* Navigation Menu */
@@ -145,6 +148,61 @@ body{
     transform: translateY(-50%);
     display: none; /* Initially hide */
 }
+
+/* Additional styles from the second set of CSS */
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    line-height: 90px;
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
+}
+
+.nav-name {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+}
+
+.nav-logo span {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: var(--text-color-second);
+}
+
+.nav-menu-btn {
+    display: none;
+}
+
+.nav-menu-btn i {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.active-link {
+    position: relative;
+    color: var(--first-color);
+    transition: .3;
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+
 
 /* Moon Icon */
 #icon {
