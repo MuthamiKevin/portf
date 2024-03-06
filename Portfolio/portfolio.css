@@ -98,6 +98,12 @@ body, h1, h2, h3, p, ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it at the left */
+    width: 100%; /* Take the full width of the viewport */
+    background: #ffffff; /* Set background color */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 /* Navigation Logo */
@@ -135,12 +141,12 @@ body, h1, h2, h3, p, ul {
 .nav-link:hover {
     color: #555;
 }
+
 #icon {
     width: 30px;
     height: auto;
     cursor: pointer;
 }
-
 
 /* Media Query for Responsive Design */
 @media (max-width: 768px) {
