@@ -3,10 +3,10 @@
 
 /* ----- VARIABLES ----- */
 :root{
-    --body-color: rgb(250, 250, 250);
+    --primary-color: rgb(250, 250, 250);
     --color-white: rgb(255, 255, 255);
 
-    --text-color-second: rgb(68, 68, 68);
+   --secondary-color: rgb(68, 68, 68);
     --text-color-third: rgb(30, 159, 171);
 
     --first-color: rgb(110, 87, 224);
@@ -17,7 +17,11 @@
     --first-shadow-color: rgba(0, 0, 0, 0.1);
 
 }
+.dark-theme{
+    --primary-color: rgb(17, 16, 16);
+    --secondary-color: rgb(245, 242, 242);
 
+}
 /* ----- BASE ----- */
 *{
     margin: 0;
@@ -76,7 +80,7 @@ i{
 
 /* ------- BASE -------- */
 body{
-    background: var(--body-color);
+    background: var(--primary-color);
 }
 .container{
     width: 100%;
@@ -92,7 +96,7 @@ nav{
     width: 100%;
     height: 90px;
     line-height: 90px;
-    background: var(--body-color);
+    background: var(--primary-color);
     padding-inline: 9vw;
     transition: .3s;
     z-index: 100;
