@@ -77,77 +77,89 @@ i{
 body{
     background: var(--body-color);
 }
-.container{
-    width: 100%;
-    position: relative;
-    overflow-x: hidden; /* not mandatory */
-}
+
 
 /* ----- NAVIGATION BAR ----- */
-nav{
-    position: fixed;
+/* Header Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Header */
+#header {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    height: 90px;
-    line-height: 90px;
-    background: var(--body-color);
-    padding-inline: 9vw;
-    transition: .3s;
-    z-index: 100;
+    align-items: center;
 }
-.nav-logo{
-   position: relative;
+
+/* Navigation Logo */
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
 }
-.nav-name{
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--text-color-third);
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
 }
-.nav-logo span{
-    position: absolute;
-    top: -15px;
-    right: -20px;
-    font-size: 5em;
-    color: var(--text-color-second);
-}
-.nav-menu, .nav_menu_list{
+
+/* Navigation Menu List */
+.nav_menu_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
 }
-.nav-menu .nav_list{
-    list-style: none;
+
+/* Navigation List Item */
+.nav_list {
+    margin-right: 20px;
     position: relative;
 }
-.nav-link{
+
+/* Navigation Link */
+.nav-link {
     text-decoration: none;
-    color: var(--text-color-second);
-    font-weight: 500;
-    padding-inline: 15px;
-    margin-inline: 20px;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s ease;
 }
-.nav-menu-btn{
-    display: none;
+
+.nav-link:hover {
+    color: #555;
 }
-.nav-menu-btn i{
-    font-size: 28px;
+
+/* Circle Indicator */
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    display: none; /* Initially hide */
+}
+
+/* Moon Icon */
+#icon {
+    width: 30px;
+    height: auto;
     cursor: pointer;
 }
-.active-link{
-    position: relative;
-    color: var(--first-color);
-    transition: .3;
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .nav_menu_list {
+        display: none; /* Hide the menu on smaller screens */
+    }
 }
-.active-link::after{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -15px;
-    transform: translate(-50%, -50%);
-    width: 5px;
-    height: 5px;
-    background: var(--first-color);
-    border-radius: 50%;
-}
+
 
 
 /* ----- WRAPPER DESIGN ----- */

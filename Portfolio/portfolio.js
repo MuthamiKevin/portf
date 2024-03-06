@@ -47,6 +47,7 @@ function myMenuFunction(){
         reset: true
   })
   
+  
   /* -- HOME -- */
   sr.reveal('.featured-text-card',{})
   sr.reveal('.featured-name',{delay: 100})
