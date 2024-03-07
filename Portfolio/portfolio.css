@@ -17,11 +17,8 @@
     --first-shadow-color: rgba(0, 0, 0, 0.1);
 
 }
-.dark-theme{
-    --primary-color: rgb(17, 16, 16);
-    --secondary-color: rgb(245, 242, 242);
 
-}
+
 /* ----- BASE ----- */
 *{
     margin: 0;

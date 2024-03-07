@@ -109,18 +109,6 @@ function scrollActive() {
 }
 window.addEventListener('scroll', scrollActive);
 
-/* ----- ICON CLICK HANDLER ----- */
-var icon = document.getElementById("icon");
-
-icon.onclick = function() {
-  document.body.classList.toggle("dark-theme");
-  if (document.body.classList.contains("dark-theme")) {
-      icon.src = "sun.png";
-  } else {
-      icon.src = "moon.png";
-  }
-};
-
 /* ----- DOWNLOAD BUTTON HANDLER ----- */
 document.getElementById('download-btn').addEventListener('click', function() {
   // Replace 'path/to/your/document.pdf' with the actual path to your document
