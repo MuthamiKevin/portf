@@ -213,10 +213,11 @@ nav{
     border-radius: 5px;
 }
 .featured-name{
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 600;
     color: var(--text-color-second);
     margin-block: 20px;
+    font-family: 'CustomFont', Roboto condensed;
 }
 .typedText{
     text-transform: capitalize;
@@ -359,11 +360,10 @@ h3{
     width: 100%; /* Take up the full width of the container */
     /* Background */
     background: var(--color-white); /* White background */
-    /* Box shadow for a raised effect */
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    /* Rounded corners */
-    border-radius: 20px;
+    /* Removed box shadow */
+    /* Removed rounded corners */
 }
+
 
 .about-info p{
     text-align: center;
