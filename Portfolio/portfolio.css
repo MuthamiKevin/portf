@@ -262,8 +262,8 @@ nav{
     animation: blur ;
 }
 .image img{
-    width: 380px;
-    height: 380px;
+    width: 430px;
+    height: 480px;
     object-fit: contain;
 }
 @keyframes imgFloat {
