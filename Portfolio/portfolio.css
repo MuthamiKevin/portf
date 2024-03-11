@@ -195,39 +195,69 @@ nav{
 }
 
 /* ----- FEATURED TEXT BOX ----- */
-.featured-text{
+/* Styles for featured text section */
+.featured-text {
     position: relative;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center; /* Corrected align-content to align-items */
     min-height: 100vh;
     flex-direction: column;
     width: 50%;
     padding-left: 20px;
 }
-.featured-text-card span{
+
+/* Styles for featured text card */
+.featured-text-card span {
     background: var(--third-color);
     color: var(--color-white);
     padding: 3px 8px;
     font-size: 12px;
     border-radius: 5px;
 }
-.featured-name{
+
+/* Styles for featured name */
+.featured-name {
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color-second);
     margin-block: 20px;
     font-family: 'CustomFont', Roboto condensed;
 }
-.typedText{
+
+/* Styles for typed text with animation */
+.typedText {
     text-transform: capitalize;
     color: var(--text-color-third);
+    animation: typing 2s steps(30), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid transparent;
+    font-family: monospace;
+    font-size: 2em;
 }
-.featured-text-info{
+
+/* Styles for featured text info */
+.featured-text-info {
     font-size: 15px;
     margin-bottom: 30px;
     color: var(--text-color-second);
 }
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+/* Keyframes for cursor blink */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 .featured-text-btn{
     display: flex;
     gap: 20px;
