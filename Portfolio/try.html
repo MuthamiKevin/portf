@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Button</title>
+<style>
+/* Style the button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Style the underline below the button */
+.dropbtn::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #4CAF50;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Style the arrow */
+.dropbtn::before {
+  content: "";
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown content when the button is clicked */
+.dropdown-content.show {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<!-- The button to toggle the dropdown -->
+<button onclick="toggleDropdown()" class="dropbtn">Dropdown</button>
+
+<!-- The dropdown content -->
+<div id="myDropdown" class="dropdown-content">
+  <p>Hidden text here...</p>
+  <p>More hidden text...</p>
+</div>
+
+<script>
+// Function to toggle the display of the dropdown content
+function toggleDropdown() {
+  var dropdown = document.getElementById("myDropdown");
+  dropdown.classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

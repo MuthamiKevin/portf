@@ -219,29 +219,10 @@ nav{
     margin-block: 20px;
     font-family: 'CustomFont', Roboto condensed;
 }
-/* Add typing animation to .typedText class */
-.typedText {
-    position: relative;
-    animation: typing 2s infinite, blink .5s infinite alternate;
+.typedText{
+    text-transform: capitalize;
+    color: var(--text-color-third);
 }
-
-/* Keyframes for typing animation */
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-/* Keyframes for cursor blink */
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
 .featured-text-info{
     font-size: 15px;
     margin-bottom: 30px;
