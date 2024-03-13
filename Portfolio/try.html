@@ -3,89 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dropdown Button</title>
+<title>Button Reveals Message</title>
 <style>
-/* Style the button */
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  position: relative;
+/* Container to hold button and message */
+.container {
+  display: flex;
+  align-items: center;
 }
 
-/* Style the underline below the button */
-.dropbtn::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #4CAF50;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-/* Style the arrow */
-.dropbtn::before {
-  content: "";
-  border: solid #ffffff;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
-}
-
-/* Style the dropdown content (hidden by default) */
-.dropdown-content {
+/* Hide the message initially */
+.message {
   display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Show the dropdown content when the button is clicked */
-.dropdown-content.show {
-  display: block;
+  margin-left: 10px; /* Add margin for spacing */
 }
 </style>
 </head>
 <body>
 
-<!-- The button to toggle the dropdown -->
-<button onclick="toggleDropdown()" class="dropbtn">Dropdown</button>
-
-<!-- The dropdown content -->
-<div id="myDropdown" class="dropdown-content">
-  <p>Hidden text here...</p>
-  <p>More hidden text...</p>
+<!-- Container to hold button and message -->
+<div class="container">
+  <!-- Button to reveal message -->
+  <button onclick="revealMessage()">Click Me</button>
+  <!-- Message to reveal -->
+  <p class="message">This is the hidden message.</p>
 </div>
 
 <script>
-// Function to toggle the display of the dropdown content
-function toggleDropdown() {
-  var dropdown = document.getElementById("myDropdown");
-  dropdown.classList.toggle("show");
-}
+// Function to reveal the message when the button is clicked
+function revealMessage() {
+  // Get the message element
+  var message = document.querySelector('.message');
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+  // Toggle the display of the message
+  if (message.style.display === 'none') {
+    message.style.display = 'block';
+  } else {
+    message.style.display = 'none';
   }
-}
+}<p>I'm a talented full stack developer with a strong passion for backend development. 
+    With a deep understanding of server-side technologies and framework.
+    I specializes in architecting robust and scalable backend systems.
+    From designing databases to implementing complex business logic, 
+    I excels in crafting efficient solutions that power the core functionality of web applications.
+    With a keen eye for optimization and a commitment to delivering high-quality code.
+    I'm always eager to tackle new challenges and push the boundaries of backend development.
+</p>
 </script>
 
 </body>
