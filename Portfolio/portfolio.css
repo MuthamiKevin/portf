@@ -339,12 +339,36 @@ h3{
     display: grid;
     grid-auto-flow: row; /* Automatically stack items vertically */
     row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    
 }
-
-/* Style for buttons */
-button.learn-more {
-    width: 12rem;
-    height: auto;
+.about-info button {
+    margin-bottom: 10px; /* Add space below each button */
+}
+.button-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for buttons */
+  button {
+    width: 100px; /* Set the width of the buttons */
+    margin-bottom: 10px; /* Add space between buttons */
+  }
+  
+  /* Hide all messages initially */
+  .message {
+    display: none;
+    margin-left: 10px; /* Add margin for spacing */
+  }
+  
+  /* Show message next to the button */
+  button:focus + .message {
+    display: block;
+  }
+button {
+    position: relative;
     display: inline-block;
     cursor: pointer;
     outline: none;
@@ -355,20 +379,14 @@ button.learn-more {
     padding: 0;
     font-size: inherit;
     font-family: inherit;
-}
-
-.button-container {
-    display: flex;
-    align-items: center;
-}
-
-/* Style for buttons */
-button.learn-more {
+   }
+   
+   button.learn-more {
     width: 12rem;
     height: auto;
-}
-
-button.learn-more .circle {
+   }
+   
+   button.learn-more .circle {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
     display: block;
@@ -377,26 +395,26 @@ button.learn-more .circle {
     height: 3rem;
     background: #282936;
     border-radius: 1.625rem;
-}
-
-button.learn-more .circle .icon {
+   }
+   
+   button.learn-more .circle .icon {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto;
     background: #fff;
-}
-
-button.learn-more .circle .icon.arrow {
+   }
+   
+   button.learn-more .circle .icon.arrow {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     left: 0.625rem;
     width: 1.125rem;
     height: 0.125rem;
     background: none;
-}
-
-button.learn-more .circle .icon.arrow::before {
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
     position: absolute;
     content: "";
     top: -0.29rem;
@@ -406,9 +424,9 @@ button.learn-more .circle .icon.arrow::before {
     border-top: 0.125rem solid #fff;
     border-right: 0.125rem solid #fff;
     transform: rotate(45deg);
-}
-
-button.learn-more .button-text {
+   }
+   
+   button.learn-more .button-text {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
@@ -422,21 +440,20 @@ button.learn-more .button-text {
     line-height: 1.6;
     text-align: center;
     text-transform: uppercase;
-}
-
-button:hover .circle {
+   }
+   
+   button:hover .circle {
     width: 100%;
-}
-
-button:hover .circle .icon.arrow {
+   }
+   
+   button:hover .circle .icon.arrow {
     background: #fff;
     transform: translate(1rem, 0);
-}
-
-button:hover .button-text {
+   }
+   
+   button:hover .button-text {
     color: #fff;
-}
-
+   }
 
 .about-btn button{
     position: absolute;
