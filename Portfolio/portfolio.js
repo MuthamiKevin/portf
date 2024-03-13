@@ -122,7 +122,19 @@ icon.onclick = function() {
   }
 });
 
+function revealMessage(buttonId) {
+  // Hide all messages first
+  var messages = document.querySelectorAll('.message');
+  messages.forEach(function(message) {
+    message.style.display = 'none';
+  });
 
+  // Get the message element corresponding to the button clicked
+  var message = document.getElementById('message' + buttonId);
+
+  // Show the message
+  message.style.display = 'block';
+}
 
 window.addEventListener('scroll', scrollActive)
 document.getElementById('download-btn').addEventListener('click', function() {

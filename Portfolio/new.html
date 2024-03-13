@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Reveals Message</title>
+<style>
+/* Container to hold buttons and messages */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container for each button and message */
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for buttons */
+button {
+  width: 100px; /* Set the width of the buttons */
+  margin-bottom: 10px; /* Add space between buttons */
+}
+
+/* Hide all messages initially */
+.message {
+  display: none;
+  margin-left: 10px; /* Add margin for spacing */
+}
+
+/* Show message next to the button */
+button:focus + .message {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<!-- Container to hold buttons and messages -->
+<div class="container">
+  <!-- First button and message -->
+  <div class="button-container">
+    <button onclick="revealMessage(1)">Button 1</button>
+    <p id="message1" class="message">This is the message for Button 1.</p>
+  </div>
+
+  <!-- Second button and message -->
+  <div class="button-container">
+    <button onclick="revealMessage(2)">Button 2</button>
+    <p id="message2" class="message">This is the message for Button 2.</p>
+  </div>
+</div>
+
+<script>
+// Function to reveal the message when the button is clicked
+function revealMessage(buttonId) {
+  // Hide all messages first
+  var messages = document.querySelectorAll('.message');
+  messages.forEach(function(message) {
+    message.style.display = 'none';
+  });
+
+  // Get the message element corresponding to the button clicked
+  var message = document.getElementById('message' + buttonId);
+
+  // Show the message
+  message.style.display = 'block';
+}
+</script>
+
+</body>
+</html>
