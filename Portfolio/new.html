@@ -28,6 +28,14 @@ button {
   display: none;
   margin-left: 10px; /* Add margin for spacing */
 }
+.message {
+  display: none;
+  position: absolute;
+  left: calc(100% + 10px); /* Position the message to the right of the button */
+  top: 0;
+  margin-left: 10px; /* Add margin for spacing */
+}
+
 
 /* Show message next to the button */
 button:focus + .message {

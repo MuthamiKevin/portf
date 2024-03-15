@@ -28,22 +28,15 @@ function headerShadow() {
   }
 }
 
-/* ----- TYPING EFFECT ----- */
-let typingEffect = new Typed(".typedText",{
-  strings : ["Designer","Youtuber","Developer"],
-  loop : true,
-  typeSpeed : 100,
-  backSpeed : 80,
-  backDelay : 2000
-})
 
-/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
-const sr = ScrollReveal({
-      origin: 'top',
-      distance: '80px',
-      duration: 2000,
-      reset: true
-})
+
+// /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+// const sr = ScrollReveal({
+//       origin: 'top',
+//       distance: '80px',
+//       duration: 2000,
+//       reset: true
+// })
 
 
 /* -- HOME -- */
@@ -54,8 +47,8 @@ sr.reveal('.featured-text-btn',{delay: 200})
 sr.reveal('.social_icons',{delay: 200})
 sr.reveal('.featured-image',{delay: 300})
 
-/* -- PROJECT BOX -- */
-sr.reveal('.project-box',{interval: 200})
+// /* -- PROJECT BOX -- */
+// sr.reveal('.project-box',{interval: 200})
 
 /* -- HEADINGS -- */
 sr.reveal('.top-header',{})
@@ -63,26 +56,26 @@ sr.reveal('.top-header',{})
 /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
 
 /* -- ABOUT INFO & CONTACT INFO -- */
-const srLeft = ScrollReveal({
-origin: 'left',
-distance: '80px',
-duration: 2000,
-reset: true
-})
+// const srLeft = ScrollReveal({
+// origin: 'left',
+// distance: '80px',
+// duration: 2000,
+// reset: true
+// })
 
-srLeft.reveal('.about-info',{delay: 100})
-srLeft.reveal('.contact-info',{delay: 100})
+// srLeft.reveal('.about-info',{delay: 100})
+// srLeft.reveal('.contact-info',{delay: 100})
 
 /* -- ABOUT SKILLS & FORM BOX -- */
-const srRight = ScrollReveal({
-origin: 'right',
-distance: '80px',
-duration: 2000,
-reset: true
-})
+// const srRight = ScrollReveal({
+// origin: 'right',
+// distance: '80px',
+// duration: 2000,
+// reset: true
+// })
 
-srRight.reveal('.skills-box',{delay: 100})
-srRight.reveal('.form-control',{delay: 100})
+// srRight.reveal('.skills-box',{delay: 100})
+// srRight.reveal('.form-control',{delay: 100})
 
 /* ----- CHANGE ACTIVE LINK ----- */
 
@@ -106,35 +99,9 @@ sections.forEach(current =>{
   }
 })
 }
-document.addEventListener("click", function(event) {
-  if (event.target && event.target.id === "icon") {
-      // Your onclick code her
-    var icon = document.getElementById("icon");
 
-icon.onclick = function() {
-  document.body.classList.toggle("dark-theme");
-  if (document.body.classList.contains("dark-theme")) {
-      icon.src = "sun.png";
-  } else {
-      icon.src = "moon.png";
-  }
-};  
-  }
-});
 
-function revealMessage(buttonId) {
-  // Hide all messages first
-  var messages = document.querySelectorAll('.message');
-  messages.forEach(function(message) {
-    message.style.display = 'none';
-  });
 
-  // Get the message element corresponding to the button clicked
-  var message = document.getElementById('message' + buttonId);
-
-  // Show the message
-  message.style.display = 'block';
-}
 
 window.addEventListener('scroll', scrollActive)
 document.getElementById('download-btn').addEventListener('click', function() {
@@ -145,3 +112,4 @@ document.getElementById('download-btn').addEventListener('click', function() {
   a.click();
   document.body.removeChild(a);
 });
+
