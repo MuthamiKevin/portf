@@ -337,7 +337,7 @@ h3{
 /* ----- ABOUT INFO ----- */
 .card {
     position: relative;
-    width: 400px;
+    width: 350px;
     height: 450px;
     border-radius: 14px;
     z-index: 1111;
@@ -350,8 +350,18 @@ h3{
     ;
   }
   
-  
+  .card h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
+.card .aboutme {
+    color: black;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    padding: 10px; /* Add padding */
+}
 
 /* ----- ABOUT / SKILLS BOX ----- */
 .skills-box{
