@@ -362,11 +362,17 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     padding: 10px; /* Add padding */
 }
-.mission{
-    width:500px;
-    height:400px;
-    float:right;
+.mission {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Align items to the end of the flex container (right side) */
 }
+/* .mission.h{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-block: 20px;
+    font-family: 'CustomFont', Roboto condensed;
+} */
 
 /* ----- ABOUT / SKILLS BOX ----- */
 .skills-box{
