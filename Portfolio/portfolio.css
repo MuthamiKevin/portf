@@ -363,16 +363,23 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 10px; /* Add padding */
 }
 .mission {
+    
     display: flex; /* Use flexbox layout */
     justify-content: center; /* Align items to the end of the flex container (right side) */
+   
 }
-/* .mission.h{
+.mission.h{
+    padding-top: 70px;
+    
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color-second);
     margin-block: 20px;
     font-family: 'CustomFont', Roboto condensed;
-} */
+}
+h2{
+    margin-top: 70px;
+}
 
 /* ----- ABOUT / SKILLS BOX ----- */
 .skills-box{
