@@ -463,13 +463,22 @@ button {
     margin-bottom: 30px;
 }
 .skills{
-   display: grid;
-   place-items: center;
-  
-   grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
-   grid-auto-rows: minmax(100px, auto); /* Minimum height of 100px, auto-adjusting */
-   gap: 10px; /* Gap between grid items */
-
+    place-content: center;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    gap: 3rem;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    grid-template-columns: repeat(2, var(--item-width));
+}
+.skills{
+    max-width: 75.25rem;
+    margin-inline: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    --item-width: 120px;
+    margin-top: 3rem;
 }
 .card {
     width: 195px;
