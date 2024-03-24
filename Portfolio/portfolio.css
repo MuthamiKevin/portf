@@ -462,30 +462,20 @@ button {
 .skills-header{
     margin-bottom: 30px;
 }
-.skills{
-    place-content: center;
-    align-content: center;
-    justify-content: center;
-    display: grid;
-    gap: 3rem;
-    row-gap: 3rem;
-    column-gap: 3rem;
-    grid-template-columns: repeat(2, var(--item-width));
-}
-.skills{
-    max-width: 75.25rem;
-    margin-inline: auto;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    --item-width: 120px;
-    margin-top: 3rem;
-}
-.card {
-    width: 195px;
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    width: 195px; /* Adjust as needed */
     height: 285px;
     background: #313131;
     border-radius: 20px;
-    ;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -551,7 +541,7 @@ button {
     100% {
       transform: translateY(0);
     }
-}
+  }
   
   .card:hover {
     transform: scale(1.04) rotate(-1deg);
