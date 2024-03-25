@@ -472,7 +472,7 @@ button {
   
   .card {
     width: 195px; /* Adjust as needed */
-    height: 285px;
+    height: 180px;
     background: #313131;
     border-radius: 20px;
     position: relative;
@@ -485,7 +485,8 @@ button {
   }
   
   .img {
-    height: 30%;
+    height: 80%;
+    width: 80%;
     position: absolute;
     transition: 0.2s ease-in-out;
     z-index: 1;
