@@ -514,11 +514,18 @@ h3{
 .section{
     min-height: 100vh;
 }
+.pro {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 50px;
+    padding: 20px;
+  }
 .card1 {
     --font-color: #323232;
     --bg-color: #e0e0e0;
     width: 250px;
-    height: 350px;
+    height: 550px;
     border-radius: 20px;
     background: var(--bg-color);
     box-shadow: -9px 9px 18px #5a5a5a,
