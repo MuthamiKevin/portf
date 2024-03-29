@@ -104,7 +104,7 @@ sections.forEach(current =>{
 
 
 window.addEventListener('scroll', scrollActive)
-document.getElementById('download-btn').addEventListener('click', function() {
+document.getElementById('button').addEventListener('click', function() {
   var a = document.createElement('a');
   a.href = 'C:\Users\mutha\OneDrive\Documents\GitHub\MuthamiKN\Portfolio\Resume.docx'; 
   a.download = 'resume.docx'; 
