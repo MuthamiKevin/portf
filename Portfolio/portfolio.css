@@ -370,9 +370,10 @@ h3{
 /* ----- ABOUT INFO ----- */
 .e-card {
     margin: 100px auto;
-    background: transparent;
+    background: darkgray;
     /* box-shadow: 0px 8px 28px -9px rgba(143, 130, 130, 0.45); */
     position: relative;
+    padding: 20px;
     width: 900px; /* Updated width to 600px */
     height: 450px; /* Updated height to 400px */
     border-radius: 16px;
@@ -398,6 +399,7 @@ h3{
   
   .infotop {
     text-align: center;
+    margin-bottom: 20px; /* Add bottom margin for spacing */
     font-size: 20px;
     position: absolute;
     top: 5.6em;
@@ -412,6 +414,7 @@ h3{
     font-weight: 100;
     color: #313131;
     position: relative;
+    margin-bottom: 20px;
   
   }
   .aboutme{
