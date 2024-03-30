@@ -351,6 +351,7 @@ nav{
 .top-header{
     text-align: center;
     margin-bottom: 5em;
+    margin-top: 0%;
 }
 .top-header h1{
     font-weight: 600;
@@ -416,6 +417,9 @@ h3{
     position: relative;
     margin-bottom: 20px;
   
+  }
+  .heading{
+    margin-top: 20px;
   }
   .aboutme{
     font-size: 14px;
