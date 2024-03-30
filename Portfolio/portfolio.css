@@ -371,7 +371,7 @@ h3{
 /* ----- ABOUT INFO ----- */
 .e-card {
     margin: 100px auto;
-    background: darkgray;
+    background:  rgb(214, 213, 213);
     /* box-shadow: 0px 8px 28px -9px rgba(143, 130, 130, 0.45); */
     position: relative;
     /* padding: 20px; */
@@ -443,7 +443,7 @@ h3{
   .card {
     width: 195px; /* Adjust as needed */
     height: 180px;
-    background: #313131;
+    background:  rgb(214, 213, 213);
     border-radius: 20px;
     position: relative;
     display: flex;
@@ -608,7 +608,7 @@ h3{
     padding: 20px;
   }
   /* this card is inspired form this - https://georgefrancis.dev/ */
-
+/* 
 .card {
   --border-radius: 0.75rem;
   --primary-color: #505052;
@@ -662,7 +662,7 @@ h3{
 }
 
 /* hover */
-.card:hover .card__title {
+/* .card:hover .card__title {
   color: var(--primary-color);
   text-decoration: underline;
 }
@@ -673,7 +673,7 @@ h3{
 
 .card:hover .card__arrow svg {
   transform: translateX(3px);
-}
+} */ 
 
 .form {
     display: flex;
