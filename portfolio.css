@@ -579,7 +579,7 @@ h3{
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-between; */
-    gap: 50px;
+    gap: 100px;
     padding: 20px;
   }
 
