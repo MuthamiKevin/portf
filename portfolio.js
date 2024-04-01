@@ -30,13 +30,6 @@ function headerShadow() {
 
 
 
-// /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
-// const sr = ScrollReveal({
-//       origin: 'top',
-//       distance: '80px',
-//       duration: 2000,
-//       reset: true
-// })
 
 
 /* -- HOME -- */
@@ -53,29 +46,7 @@ sr.reveal('.featured-image',{delay: 300})
 /* -- HEADINGS -- */
 sr.reveal('.top-header',{})
 
-/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
 
-/* -- ABOUT INFO & CONTACT INFO -- */
-// const srLeft = ScrollReveal({
-// origin: 'left',
-// distance: '80px',
-// duration: 2000,
-// reset: true
-// })
-
-// srLeft.reveal('.about-info',{delay: 100})
-// srLeft.reveal('.contact-info',{delay: 100})
-
-/* -- ABOUT SKILLS & FORM BOX -- */
-// const srRight = ScrollReveal({
-// origin: 'right',
-// distance: '80px',
-// duration: 2000,
-// reset: true
-// })
-
-// srRight.reveal('.skills-box',{delay: 100})
-// srRight.reveal('.form-control',{delay: 100})
 
 /* ----- CHANGE ACTIVE LINK ----- */
 
@@ -113,3 +84,31 @@ document.getElementById('button').addEventListener('click', function() {
   document.body.removeChild(a);
 });
 
+function sendEmail(){
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "muthamikevin80@gmail.com",
+    Password : "39899677#Kn,",
+    To : 'muthamikevin80@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "Services Inquiry",
+    Body : "Name:" + document.getElementById("first").value
+          +"<br> Email:"  + document.getElementById("email").value
+          +"<br> Phone NO:"  + document.getElementById("tel").value
+          +"<br> Message:"  + document.getElementById("message").value
+}).then(
+  message => alert("Message sent successfully")
+);
+}
+function sendEmail() {
+  var formData = new FormData(document.getElementById("emailForm"));
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "send_email.php"); // Replace "send_email.php" with your server-side script
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+          // Handle response from server (e.g., show success message)
+          alert(xhr.responseText);
+      }
+  };
+  xhr.send(formData);
+}

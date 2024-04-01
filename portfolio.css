@@ -416,7 +416,7 @@ h3{
   }
   
   .card {
-    width: 195px; /* Adjust as needed */
+    width: 195px ;/* Adjust as needed */
     height: 180px;
     background:  rgb(214, 213, 213);
     border-radius: 20px;
@@ -428,7 +428,7 @@ h3{
     color: white;
     transition: 0.2s ease-in-out;
   }
-  
+
   .img {
     height: 80%;
     width: 80%;
@@ -589,7 +589,7 @@ h3{
   --primary-color: #505052;
   --secondary-color: #3c3852;
   width: 300px;
-  font-family: "Arial";
+  height:350px;
   padding: 1rem;
   cursor: pointer;
   border-radius: var(--border-radius);
@@ -598,13 +598,12 @@ h3{
   position: relative;
 }
 
-.card2 > * + * {
-  margin-top: 1.1em;
-}
+
 
 .card2 .card2__content {
   color: var(--secondary-color);
-  font-size: 0.86rem;
+  font-size: 1.2rem;
+  font-family: "Arial";
 }
 
 .card2 .card2__title {
@@ -613,42 +612,8 @@ h3{
   font-weight: bold;
 }
 
-.card2 .card2__date {
-  color: #6e6b80;
-  font-size: 0.8rem;
-}
 
-.card2 .card2__arrow {
-  position: absolute;
-  background: var(--primary-color);
-  padding: 0.4rem;
-  border-top-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
-  bottom: 0;
-  right: 0;
-  transition: 0.2s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.card2 svg {
-  transition: 0.2s;
-}
-
-/* hover */
- .card2:hover .card2__title {
-  color: var(--primary-color);
-  text-decoration: underline;
-}
-
-.card2:hover .card2__arrow {
-  background: #111;
-}
-
-.card2:hover .card2__arrow svg {
-  transform: translateX(3px);
-} 
 
 .form {
     display: flex;

@@ -310,27 +310,23 @@
                   <div class="card2">
                     <h3 class="card2__title"> Contact
                     </h3>
-                    <p class="card2__content"> Do you have a project in mind that you would love for me to work ? <br> Would you love to collaborate with me on a  projectt ? <br>Would you love to just connect with me and share ideas?<br>Worry not!<br>
+                    <p class="card2__content"> Do you have a project in mind that you would love for me to work ? <br> Would you love to collaborate with me on a  project ? <br>Would you love to just connect with me and share ideas?<br>Worry not!<br>
                        I'm just a mail away. <br> Get in touch with me and I'll be sure to respond. </p>
                     
-                    <div class="card2__arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
-                            <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
-                        </svg>
-                    </div>
+                   
                 </div>
                     
                     <div>
-                        <form class="form" method="POST" action="/">
+                        <form class="form" id="emailForm">
     
                         <div class="flex">
                             <label>
-                                <input class="input" type="text" placeholder="" required="">
+                                <input class="input" type="first" placeholder="" required="">
                                 <span>first name</span>
                             </label>
                     
                             <label>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-                                <input class="input" type="text" placeholder="" required="">
+                                <input class="input" type="second" placeholder="" required="">
                                 <span>last name</span>
                             </label>
                         </div>  
@@ -345,11 +341,11 @@
                             <span>contact number</span>
                         </label>
                         <label>
-                            <textarea class="input01" placeholder="" rows="3" required=""></textarea>
+                            <textarea class="input01" placeholder="message" rows="3" required=""></textarea>
                             <span>message</span>
                         </label>
                         
-                        <button href="#" class="fancy">
+                        <button type="submit">
                           <span class="top-key"></span>
                           <span class="text">submit</span>
                           <span class="bottom-key-1"></span>
@@ -419,7 +415,8 @@
     <!-- ----- SCROLL REVEAL JS Link----- -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- ----- MAIN JS ----- -->
-    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
 </body>
 
 </html>
