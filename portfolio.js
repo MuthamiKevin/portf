@@ -100,15 +100,3 @@ function sendEmail(){
   message => alert("Message sent successfully")
 );
 }
-function sendEmail() {
-  var formData = new FormData(document.getElementById("emailForm"));
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "send_email.php"); // Replace "send_email.php" with your server-side script
-  xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-          // Handle response from server (e.g., show success message)
-          alert(xhr.responseText);
-      }
-  };
-  xhr.send(formData);
-}
