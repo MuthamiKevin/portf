@@ -100,3 +100,96 @@ function sendEmail(){
   message => alert("Message sent successfully")
 );
 }
+document.addEventListener('DOMContentLoaded', function() {
+  var editor = grapesjs.init({
+      container: '.container',
+      // Set the height of the editor
+      height: '100%',
+      // Enable components panel
+      panels: { 
+          defaults: [
+              {
+                  id: 'panel-left',
+                  el: '.panel-left',
+                  // Enable components panel
+                  resizable: { 
+                      maxDim: 200, 
+                      minDim: 100,
+                      tc: 0, // Top handler
+                      cl: 1, // Left handler
+                      cr: 0, // Right handler
+                      bc: 0, // Bottom handler
+                      // Being a flex child we need to change `flex-basis` also
+                      keyWidth: 'flex-basis',
+                  }
+              },
+              {
+                  id: 'basic-actions',
+                  el: '.panel-right',
+                  buttons: [
+                      {
+                          id: 'visibility',
+                          active: true, // active by default
+                          label: '<u>B</u>',
+                          command: 'sw-visibility', // Built-in command
+                          context: 'sw-visibility', // Better to use the same of the command
+                          className: 'btn-vis', // Class for styling
+                      },
+                      // Other buttons
+                  ],
+              }
+          ]
+      },
+      // Enable commands
+      commands: {
+          defaults: [
+              {
+                  id: 'grapes-undo',
+                  run: function(editor, sender) {
+                      sender.set('active', 0); // turn off the button
+                      editor.UndoManager.undo(1); // Undo 1 action
+                  },
+                  stop: function(editor, sender) {
+                      sender.set('active', 1); // turn on the button
+                  },
+              },
+              // Other commands
+          ],
+      },
+      // Enable asset manager
+      assetManager: {
+          embedAsBase64: 1, // Enable to convert images in base64
+      },
+      // Enable style manager
+      styleManager: {
+          sectors: [
+              {
+                  name: 'General',
+                  open: false,
+                  buildProps: ['float', 'display', 'position', 'top', 'right', 'left', 'bottom'],
+              },
+              // Other sectors
+          ],
+      },
+      // Enable device manager
+      deviceManager: {
+          devices: [{
+              name: 'Desktop',
+              width: '', // default size
+          }, {
+              name: 'Tablet',
+              width: '768px', // this value will be used on canvas
+              widthMedia: '992px', // this value will be used in CSS
+          }],
+      },
+      // Enable plugins
+      plugins: [
+          // Add plugins here
+      ],
+      // Enable custom components
+      components: '',
+      // Enable custom styles
+      style: '',
+  });
+});
+
