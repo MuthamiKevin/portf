@@ -502,7 +502,7 @@ h3{
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-between; */
-    gap: 50px;
+    gap: 40px;
     padding: 20px;
   }
 .card1 {
