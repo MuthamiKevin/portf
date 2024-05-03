@@ -317,44 +317,45 @@
                    
                 </div>
                     
-                    <div>
-                        <form class="form" onsubmit="sendEmail(); reset(); return false;">
-    
+                <div>
+                    <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="d10bb40d-4966-4c30-9e4b-abc081371dd0">
+                        
                         <div class="flex">
                             <label>
-                                <input class="input" type="first" placeholder="" required="">
-                                <span>first name</span>
+                                <input class="input" type="text" name="first_name" placeholder="" required="">
+                                <span>First Name</span>
                             </label>
-                    
+                                
                             <label>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-                                <input class="input" type="second" placeholder="" required="">
-                                <span>last name</span>
+                                <input class="input" type="text" name="last_name" placeholder="" required="">
+                                <span>Last Name</span>
                             </label>
                         </div>  
                                 
                         <label>
-                            <input class="input" type="email" placeholder="" required="">
-                            <span>email</span>
+                            <input class="input" type="email" name="email" placeholder="" required="">
+                            <span>Email</span>
                         </label> 
-                            
+                                
                         <label>
-                            <input class="input" placeholder="" type="tel" required="">
-                            <span>contact number</span>
+                            <input class="input" type="tel" name="contact_number" placeholder="" required="">
+                            <span>Contact Number</span>
                         </label>
                         <label>
-                            <textarea class="input01" placeholder="message" rows="3" required=""></textarea>
-                            <span>message</span>
+                            <textarea class="input01" name="message" placeholder="Message" rows="3" required=""></textarea>
+                            <span>Message</span>
                         </label>
                         
                         <button type="submit">
-                          <span class="top-key"></span>
-                          <span class="text">submit</span>
-                          <span class="bottom-key-1"></span>
-                          <span class="bottom-key-2"></span>
+                            <span class="top-key"></span>
+                            <span class="text">Submit</span>
+                            <span class="bottom-key-1"></span>
+                            <span class="bottom-key-2"></span>
                         </button>
-                        </form>
-                    </div>
-                    
+                    </form>
+                </div>
+                
                   <div class="card-client">
                     <div class="user-picture">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
