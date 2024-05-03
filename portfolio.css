@@ -410,13 +410,12 @@ h3{
 .skills {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    gap: 50px;
+    gap: 30px;
     padding: 20px;
   }
   
   .card {
-    width: 195px ;/* Adjust as needed */
+    width: 195px ;
     height: 180px;
     background:  rgb(214, 213, 213);
     border-radius: 20px;
@@ -579,7 +578,7 @@ h3{
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-between; */
-    gap: 100px;
+    gap: 50px;
     padding: 20px;
   }
 
